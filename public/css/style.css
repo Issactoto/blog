@@ -1,0 +1,19 @@
+
+.box{
+    display:flex;
+    flex-direction: column;
+    padding:2vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainPhoto{
+    min-height: 60vh;
+    max-height: 60vh;
+}
+
+
+.word{
+    font-size: 3vh;
+}

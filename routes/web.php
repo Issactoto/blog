@@ -14,10 +14,18 @@ use App\Http\Controllers\PostsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[HomeController::class, 'home'])->name('home.index');
+Route::get('/',[HomeController::class, 'index'])->name('home.index');
 Route::get('/contact',[HomeController::class, 'contact'])->name('home.contact');
 
 
 
 Route::resource('posts',PostsController::class)->only(['index','show','store','create']);
 
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('');

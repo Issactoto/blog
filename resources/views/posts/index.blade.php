@@ -6,9 +6,10 @@
 
 @section('content')
     @foreach($posts as $post)
-        <div>
+    <li>
+        <a href ='posts/{{$post['id']}}'>
             {{$post['title']}}
-            {{$post['content']}}
-        </div>
+        </a>
+    </li>
     @endforeach
 @endsection

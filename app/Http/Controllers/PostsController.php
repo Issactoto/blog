@@ -8,6 +8,12 @@ use App\Models\BlogPost;
 class PostsController extends Controller
 {
     //
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+
     public function index(){
         return view('posts.index',['posts' => BlogPost::orderBy('created_at','desc')->get()]);
     }

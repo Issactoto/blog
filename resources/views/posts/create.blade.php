@@ -5,6 +5,16 @@
 @endsection
 
 @section('content')
+@guest
+<p class = "p-2" style="display: inline-block;">
+    If you want to add a blog post, you need to 
+</p>
+@if (Route::has('login'))
+    <a  href="{{ route('login') }}" style="display: inline-block;">{{ __('Login') }}</a>
+@endif
+
+@else
+
     <div>
         <form action ="{{ route('posts.store') }}" method ="POST">
             @csrf
@@ -20,4 +30,5 @@
             @endforeach
     </div>
     @endif
+@endguest
 @endsection
